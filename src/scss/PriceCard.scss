@@ -63,7 +63,7 @@
     a {
         background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
         padding: 16px;
-        border-radius: 10px;
+        border-radius: 6px;
         font-weight: 700;
         color: white;
         text-decoration: none;
@@ -75,7 +75,7 @@
 
 .price_card_container:nth-of-type(3) {
     background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -119,7 +119,7 @@
     a {
         background: white;
         padding: 16px;
-        border-radius: 10px;
+        border-radius: 6px;
         font-weight: 700;
         color: hsl(237, 63%, 64%);
         text-decoration: none;
