@@ -9,7 +9,7 @@ type Props = {
 const PriceList = ({ toggle }: Props) => {
 
     return (
-        < >
+        <>
             {basic && <PriceCard {...basic} toggle={toggle} />}
             {professional && <PriceCard {...professional} toggle={toggle} />}
             {master && <PriceCard {...master} toggle={toggle} />}
