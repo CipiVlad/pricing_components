@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+
+@media screen and (max-width:$mobile-width) {
+    .App {
+        height: 100vh;
+
+        // background svg
+        .bg_Top {
+            position: absolute;
+            top: 0;
+            right: -200px;
+            z-index: -1;
+        }
+    }
+
+}
