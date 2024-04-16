@@ -1,7 +1,19 @@
 @import './variables.scss';
 
 
+.App {
+    img {
+        position: absolute;
+        z-index: -1;
+        height: 100vh;
+        top: 0;
+        right: 0;
 
+
+    }
+
+
+}
 
 @media screen and (max-width:$mobile-width) {
     .App {
