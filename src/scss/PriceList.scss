@@ -73,6 +73,7 @@
             background: white;
             color: hsl(237, 63%, 64%);
             border: 1px solid $dark-grayish-blue;
+            transition: ease-in 0.3s;
         }
 
 
@@ -135,6 +136,7 @@
             background: transparent;
             color: white;
             border: 1px solid white;
+            transition: ease-in 0.3s;
         }
 
 
