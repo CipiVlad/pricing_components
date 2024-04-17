@@ -1,6 +1,7 @@
 import TogglePrice from './components/TogglePrice'
 import './scss/App.scss'
 import BackgroundTopSvg from './components/BackgroundTopSvg'
+import BackgoundBottomSvg from './components/BackgoundBottomSvg'
 import PriceList from './components/PriceList'
 import { useState } from 'react'
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <BackgroundTopSvg />
       <TogglePrice toggle={toggle} setToggle={setToggle} />
       <PriceList toggle={toggle} />
+      <BackgoundBottomSvg />
     </div>
   )
 }
