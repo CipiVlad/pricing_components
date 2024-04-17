@@ -1,4 +1,3 @@
-import '../scss/PriceCard.scss'
 import { PricingModel } from "../models/pricing.model"
 
 type ToggleProps = {
@@ -6,8 +5,6 @@ type ToggleProps = {
 }
 
 const PriceCard = (props: PricingModel & ToggleProps) => {
-
-
     return (
         <div className="price_card_container ">
             <h2>{props.mode}</h2>

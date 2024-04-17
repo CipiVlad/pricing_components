@@ -14,9 +14,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -25,60 +23,131 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
 Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
-- Control the toggle with both their mouse/trackpad and their keyboard
-- **Bonus**: Complete the challenge with just HTML and CSS
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<!-- ![desktop](./public/screenshot.png)
+![mobile](./public/screenshot_mobile.png) -->
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+```
+html 
+<img src='./public/screenshot.png' alt='desktop-screenshot'>
+<img src='./public/screenshot_mobile.png' alt='mobile-screenshot'>
+```
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [frontendmentor](https://your-solution-url.com)
+- Live Site URL: [visit](https://cipivlad.github.io/pricing_components/)
 
 ## My process
 
 ### Built with
 
+- Mobile-first workflow
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS 
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [React](https://react.dev/) - JS library
+- Typescript
+- Browsers: Google Chrome, Firefox
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+### Code Snippets
 
-### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
+
 ```
+#### really enjoyed this workflow: instead of filling up html with lots of content
+##### 1.  created "pricing.model.ts" with type alias as a model
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+export type PricingModel = {
+    mode: string,
+    monthly: string,
+    yearly: string,
+    storage: string,
+    users: string,
+    send: string
 }
+
+export const basic: PricingModel = {
+    mode: 'Basic',
+    monthly: '19.99',
+    yearly: '199.99',
+    storage: '500 GB Storage',
+    users: '2 Users Allowed',
+    send: 'Send up to 3 GB'
+} 
+
+export const professional: PricingModel = { ...}
+
+export const master:PricingModel = {...}
+
 ```
+##### 2. made a price card comopnent from where content will be passed as props to parent component
+```js
+
+import { PricingModel } from "../models/pricing.model"
+
+type ToggleProps = {
+    toggle: boolean
+}
+
+const PriceCard = (props: PricingModel & ToggleProps) => {
+    return (
+        <div className="price_card_container ">
+            <h2>{props.mode}</h2>
+            <p><span>$</span>{props.toggle ? props.monthly : props.yearly}</p>
+            <div className="price_description">
+                <div className="line"></div>
+                <p>{props.storage}</p>
+                <div className="line"></div>
+                <p>{props.users}</p>
+                <div className="line"></div>
+                <p>{props.send}</p>
+                <div className="line"></div>
+            </div>
+            <a href="#">LEARN MORE</a>
+        </div>
+    )
+}
+export default PriceCard
+
+```
+
+##### 3. conditionally render PriceCard with spread operator 
+```js
+import '../scss/PriceList.scss'
+import PriceCard from "./PriceCard"
+import { basic, master, professional } from "../models/pricing.model"
+
+
+type Props = {
+    toggle: boolean
+}
+
+const PriceList = ({ toggle }: Props) => {
+
+    return (
+        <div className="price_list_container">
+            {/* conditionally render a PriceCard component.
+             If the basic variable is truthy, 
+             the PriceCard component will be rendered with the basic object spread into its props, 
+             along with the toggle prop. */}
+            {basic && <PriceCard {...basic} toggle={toggle} />}
+            {professional && <PriceCard {...professional} toggle={toggle} />}
+            {master && <PriceCard {...master} toggle={toggle} />}
+        </div>
+    )
+}
+export default PriceList
+
+
+```
+
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
@@ -99,14 +168,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Portfolio](https://cipivlad.github.io/myportfoliosite/)
+- Frontend Mentor - [@CipiVlad](https://www.frontendmentor.io/profile/CipiVlad)
+- DEV.to [https://dev.to/cipivlad](https://dev.to/cipivlad)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+## Tags
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+#react, #scss, #typescript
