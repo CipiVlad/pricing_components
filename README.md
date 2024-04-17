@@ -10,8 +10,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Code Snippets](#what-i-learned)
-  - [Continued development](#continued-development)
+  - [Code Snippets](#code-snippets-and-learnings)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -138,13 +137,16 @@ export default PriceList
 
 ```css
 
+h2 ~ p > span {
+  font-size: xxx-large;
+}
 
 ```
 
 ### Useful resources
 
-- [CSS Selectors](https://www.w3schools.com/cssref/css_selectors.php) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [SVG in React]() - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Selectors](https://www.w3schools.com/cssref/css_selectors.php) - This helped me for using "~" and "<". I really liked this pattern because it allowed me to select nested elements and be specific
+- [SVG Comonents in React](https://css-tricks.com/creating-ui-components-in-svg/) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 - [config vite for deploying github pages](https://vitejs.dev/guide/static-deploy#github-pages)
 
 
