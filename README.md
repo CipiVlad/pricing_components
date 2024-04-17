@@ -10,7 +10,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
+  - [Code Snippets](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -26,14 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-<!-- ![desktop](./public/screenshot.png)
-![mobile](./public/screenshot_mobile.png) -->
+![desktop](./public/screenshot.png) ![mobile](./public/screenshot_mobile.png)
 
-```
-html 
-<img src='./public/screenshot.png' alt='desktop-screenshot'>
-<img src='./public/screenshot_mobile.png' alt='mobile-screenshot'>
-```
 
 ### Links
 
@@ -53,13 +47,8 @@ html
 - Typescript
 - Browsers: Google Chrome, Firefox
 
-### Code Snippets
+### Code Snippets and learnings
 
-
-```css
-
-
-```
 #### really enjoyed this workflow: instead of filling up html with lots of content
 ##### 1.  created "pricing.model.ts" with type alias as a model
 ```js
@@ -144,27 +133,20 @@ const PriceList = ({ toggle }: Props) => {
     )
 }
 export default PriceList
+```
+
+
+```css
 
 
 ```
 
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Selectors](https://www.w3schools.com/cssref/css_selectors.php) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [SVG in React]() - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [config vite for deploying github pages](https://vitejs.dev/guide/static-deploy#github-pages)
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
@@ -174,4 +156,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Tags
 
-#react, #scss, #typescript
+#react, #scss, #typescript, #github-pages, #vite
