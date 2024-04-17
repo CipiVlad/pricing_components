@@ -15,14 +15,12 @@
 
 @media screen and (max-width:$mobile-width) {
     .App {
-        height: 100vh;
-
-        // background svg
-        .bg_Top {
+        img {
             position: absolute;
-            top: 0;
-            right: -200px;
             z-index: -1;
+            height: 100vh;
+            top: 0;
+            right: 0;
         }
     }
 

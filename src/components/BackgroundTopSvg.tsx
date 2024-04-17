@@ -1,4 +1,4 @@
-import TogglePrice from "./TogglePrice"
+import '../scss/App.scss'
 import bgTop from '../assets/images/bg-top.svg'
 
 const BackgroundTopSvg = () => {

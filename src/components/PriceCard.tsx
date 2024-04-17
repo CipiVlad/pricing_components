@@ -6,8 +6,10 @@ type ToggleProps = {
 }
 
 const PriceCard = (props: PricingModel & ToggleProps) => {
+
+
     return (
-        <div className="price_card_container">
+        <div className="price_card_container ">
             <h2>{props.mode}</h2>
             <p><span>$</span>{props.toggle ? props.monthly : props.yearly}</p>
             <div className="price_description">
