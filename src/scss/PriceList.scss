@@ -13,6 +13,7 @@
         text-align: center;
     }
 
+
     .price_card_container:nth-of-type(1),
     .price_card_container:nth-of-type(3) {
         background-color: white;
@@ -66,6 +67,12 @@
             color: white;
             text-decoration: none;
             letter-spacing: 0.1em;
+        }
+
+        a:hover {
+            background: white;
+            color: hsl(237, 63%, 64%);
+            border: 1px solid $dark-grayish-blue;
         }
 
 
@@ -123,6 +130,13 @@
             text-decoration: none;
             letter-spacing: 0.1em;
         }
+
+        a:hover {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
 
     }
 }
